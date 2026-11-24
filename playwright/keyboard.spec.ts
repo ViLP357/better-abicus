@@ -28,6 +28,8 @@ test("Crunch by clicking Equals sign on the on-screen keypad", async ({ page }) 
 test("Degrees are selected by default", async ({ page }) => {
 	await expect(page.getByRole("button", { name: "Deg" })).toBeDisabled();
 	await expect(page.getByRole("button", { name: "Rad" })).not.toBeDisabled();
+	await expect(page.getByRole("button", { name: "Deg" })).toHaveClass(/bg-rad-deg-active/);
+	await expect(page.getByRole("button", { name: "Rad" })).toHaveClass(/bg-rad-deg-inactive/);
 
 	await page.getByRole("textbox").fill("sin(90)");
 	await page.keyboard.press("=");
@@ -42,6 +44,7 @@ test("Can change to radians by pressing tab", async ({ page }) => {
 
 	await expect(page.getByRole("button", { name: "Deg" })).not.toBeDisabled();
 	await expect(page.getByRole("button", { name: "Rad" })).toBeDisabled();
+	await expect(page.getByRole("button", { name: "Rad" })).toHaveClass(/bg-rad-deg-active/);
 
 	await page.getByRole("textbox").fill("sin(pi÷2)");
 	await page.keyboard.press("=");

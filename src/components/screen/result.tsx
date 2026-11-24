@@ -18,7 +18,7 @@ export default function Result() {
 				"text-2xl",
 				"px-4 py-1",
 				"bg-blue-light",
-				shouldShowOutput ? "translate-y-0" : "translate-y-full",
+				shouldShowOutput ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none",
 			)}
 		>
 			<span className="pointer-events-none text-slate-500">{"="}</span>

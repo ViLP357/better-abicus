@@ -15,10 +15,10 @@ export default function Screen() {
 					"text-xl",
 					"bg-white",
 					"border border-blue",
-					"rounded-md overflow-hidden",
+					"rounded-md",
 					"border border-abi-dgrey has-focus:border-transparent",
 					"has-focus:ring-2 ring-blue-400",
-				)}
+				)} 
 			>
 				<Result />
 				<Input />

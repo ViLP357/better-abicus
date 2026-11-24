@@ -97,3 +97,27 @@ button {
 .bg-grey-050 {
 	background-color: var(--grey-050);
 }
+
+.bg-rad-deg-active {
+	--bg: #58c074;
+	background-color: var(--bg);
+	/*box-shadow: 1px 2px 2px red;*/
+	box-shadow: rgba(0, 0, 0, 0.24) 1px 5px 10px;
+	
+}
+
+.key.bg-rad-deg-active:hover,
+.key.bg-rad-deg-active:active {
+	background-color: var(--bg);
+}
+
+.bg-rad-deg-inactive {
+	--bg: #ededed;
+	background-color: var(--bg);
+	/*color: white;*/
+	box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+	&.key:active {
+		background-color: #e3e3e3;
+	}
+}

@@ -11,7 +11,7 @@ export default function RadDegToggle() {
 				"h-10",
 				"border border-blue-border",
 				"divide-x divide-abi-dgrey",
-				"rounded-md overflow-hidden",
+				"rounded-md",
 				"flex items-center",
 			)}
 		>
@@ -21,8 +21,10 @@ export default function RadDegToggle() {
 				className={clsx(
 					"text-[16px] key",
 					"h-full px-3",
-					"transition-all",
-					angleUnit === "rad" ? "bg-blue-light border-blue-border text-black" : "bg-white border-blue-border",
+					"rounded-l-md transition-all",
+					angleUnit === "rad"
+						? "bg-rad-deg-active border-blue-border text-black"
+						: "bg-rad-deg-inactive border-blue-border",
 				)}
 			>
 				Rad
@@ -33,8 +35,8 @@ export default function RadDegToggle() {
 				className={clsx(
 					"text-[16px] key",
 					"h-full px-3",
-					"transition-all",
-					angleUnit === "deg" ? "bg-blue-light border-blue-border text-black" : "bg-white",
+					"rounded-r-md transition-all",
+					angleUnit === "deg" ? "bg-rad-deg-active border-blue-border text-black" : "bg-rad-deg-inactive",
 				)}
 			>
 				Deg
